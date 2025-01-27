@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditi Daily Employee Updates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header-section">
+            <div class="date-display" id="currentDate">
+                <span class="dot"></span>
+                <span id="dateText"></span>
+                <span class="dot"></span>
+            </div>
+            <h1>Aditi Daily Employee Updates</h1>
+            <div class="manager-info">
+                <span class="manager-label">Reporting Manager</span>
+                <span class="manager-name">Indira</span>
+            </div>
+        </div>
+        <form id="updateForm">
+            <!-- Add Employee Name field -->
+            <div class="form-group">
+                <label class="required" for="employeeName">Employee Name</label>
+                <input 
+                    type="text" 
+                    id="employeeName" 
+                    name="employeeName" 
+                    required 
+                    placeholder="Enter your full name"
+                    autocomplete="name"
+                    class="name-input"
+                >
+            </div>
+
+            <div class="form-group">
+                <label class="required" for="task">Tasks Completed Today</label>
+                <textarea id="task" name="task" required placeholder="List the tasks you completed today"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="blockers">Blockers (if any)</label>
+                <textarea id="blockers" name="blockers" placeholder="Describe any challenges or blockers you encountered"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="required" for="status">Task Status</label>
+                <select id="status" name="status" required>
+                    <option value="">Select status</option>
+                    <option value="completed">Completed</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="stuck">Stuck</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="help">Help Needed</label>
+                <textarea id="help" name="help" placeholder="Describe what kind of help you need"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Additional Notes</label>
+                <textarea id="notes" name="notes" placeholder="Any additional comments or notes"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="attachment">Attachments</label>
+                <input type="file" id="attachment" name="attachment">
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Update</button>
+        </form>
+        <div id="successMessage" class="success-message">
+            Thank you for your update! It has been submitted successfully.
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

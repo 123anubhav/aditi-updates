@@ -3,14 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aditi Daily Employee Updates</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Aditi Daily Employee Updates | Task Management System</title>
+    <meta name="description" content="Streamline your daily employee updates with Aditi's task management system. Track completed tasks, blockers, and progress efficiently.">
+    <meta name="keywords" content="employee updates, task management, daily updates, employee tracking, project management, Aditi updates">
+    <meta name="author" content="Aditi">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Aditi Daily Employee Updates">
+    <meta property="og:description" content="Efficient employee task tracking and management system">
+    <meta property="og:image" content="https://123anubhav.github.io/aditi-updates/aditi.png">
+    <meta property="og:url" content="https://123anubhav.github.io/aditi-updates/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aditi Daily Employee Updates">
+    <meta name="twitter:description" content="Streamline your daily employee updates and task management">
+    <meta name="twitter:image" content="https://123anubhav.github.io/aditi-updates/aditi.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="aditi.png">
+    <link rel="apple-touch-icon" href="aditi.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://123anubhav.github.io/aditi-updates/">
+    
+    <!-- Fonts and Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Aditi Daily Employee Updates",
+        "description": "Employee task management and daily updates tracking system",
+        "image": "https://123anubhav.github.io/aditi-updates/aditi.png",
+        "url": "https://123anubhav.github.io/aditi-updates/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web"
+    }
+    </script>
 </head>
 <body>
     <div class="container">
         <div class="header-section">
+            <!-- <img src="aditi.png" alt="Aditi Updates Logo" class="logo" width="100" height="100"> -->
             <div class="date-display" id="currentDate">
                 <span class="dot"></span>
                 <span id="dateText"></span>
@@ -22,63 +63,70 @@
                 <span class="manager-name">Indira</span>
             </div>
         </div>
-        <form id="updateForm">
-            <!-- Add Employee Name field -->
-            <div class="form-group">
-                <label class="required" for="employeeName">Employee Name</label>
-                <input 
-                    type="text" 
-                    id="employeeName" 
-                    name="employeeName" 
-                    required 
-                    placeholder="Enter your full name"
-                    autocomplete="name"
-                    class="name-input"
-                >
-            </div>
+        <main>
+            <form id="updateForm" role="form" aria-label="Employee Update Form">
+                <!-- Add Employee Name field -->
+                <div class="form-group">
+                    <label class="required" for="employeeName">Employee Name</label>
+                    <input 
+                        type="text" 
+                        id="employeeName" 
+                        name="employeeName" 
+                        required 
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        class="name-input"
+                    >
+                </div>
 
-            <div class="form-group">
-                <label class="required" for="task">Tasks Completed Today</label>
-                <textarea id="task" name="task" required placeholder="List the tasks you completed today"></textarea>
-            </div>
+                <div class="form-group">
+                    <label class="required" for="task">Tasks Completed Today</label>
+                    <textarea id="task" name="task" required placeholder="List the tasks you completed today"></textarea>
+                </div>
 
-            <div class="form-group">
-                <label for="blockers">Blockers (if any)</label>
-                <textarea id="blockers" name="blockers" placeholder="Describe any challenges or blockers you encountered"></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="blockers">Blockers (if any)</label>
+                    <textarea id="blockers" name="blockers" placeholder="Describe any challenges or blockers you encountered"></textarea>
+                </div>
 
-            <div class="form-group">
-                <label class="required" for="status">Task Status</label>
-                <select id="status" name="status" required>
-                    <option value="">Select status</option>
-                    <option value="completed">Completed</option>
-                    <option value="in-progress">In Progress</option>
-                    <option value="stuck">Stuck</option>
-                </select>
-            </div>
+                <div class="form-group">
+                    <label class="required" for="status">Task Status</label>
+                    <select id="status" name="status" required>
+                        <option value="">Select status</option>
+                        <option value="completed">Completed</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="stuck">Stuck</option>
+                    </select>
+                </div>
 
-            <div class="form-group">
-                <label for="help">Help Needed</label>
-                <textarea id="help" name="help" placeholder="Describe what kind of help you need"></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="help">Help Needed</label>
+                    <textarea id="help" name="help" placeholder="Describe what kind of help you need"></textarea>
+                </div>
 
-            <div class="form-group">
-                <label for="notes">Additional Notes</label>
-                <textarea id="notes" name="notes" placeholder="Any additional comments or notes"></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" name="notes" placeholder="Any additional comments or notes"></textarea>
+                </div>
 
-            <div class="form-group">
-                <label for="attachment">Attachments</label>
-                <input type="file" id="attachment" name="attachment">
-            </div>
+                <!-- <div class="form-group">
+                    <label for="attachment">Attachments</label>
+                    <input type="file" id="attachment" name="attachment">
+                </div> -->
 
-            <button type="submit" class="submit-btn">Submit Update</button>
-        </form>
+                <button type="submit" class="submit-btn">Submit Update</button>
+            </form>
+        </main>
         <div id="successMessage" class="success-message">
             Thank you for your update! It has been submitted successfully.
         </div>
+        <footer>
+            <p>&copy; 2025 Aditi Updates. All rights reserved.</p>
+        </footer>
     </div>
-    <script src="script.js"></script>
-
+    <noscript>
+        <p class="error-message">Please enable JavaScript to use this application.</p>
+    </noscript>
+    <script src="script.js" defer></script>
 </body>
 </html>
